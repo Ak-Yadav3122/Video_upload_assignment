@@ -1,9 +1,8 @@
 "use client"
+import { useState, useRef } from "react";
+import Video from "@/components/Video";
 import Live from "@/components/Live";
 import Posts from "@/components/Posts";
-import Video from "@/components/Video";
-import { useState, useRef } from "react";
-
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Videos");
@@ -12,13 +11,13 @@ const videoComponentRef = useRef<{ setShowUploadForm: (show: boolean) => void }>
   const renderContent = () => {
     switch (activeTab) {
       case "Videos":
-        return <Video key="video" />;
+        return <Video ref={videoComponentRef} />;
       case "Live":
-        return <Live key="live" />;
+        return <Live />;
       case "Posts":
-        return <Posts key="posts" />;
+        return <Posts />;
       default:
-        return <Video key="video-default" />;
+        return <Video ref={videoComponentRef} />;
     }
   };
 

@@ -1,5 +1,5 @@
 {
-  "name": "video_upload_assignment",
+  "name": "next_assignment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,8 @@
     "next": "15.2.1",
     "prisma": "^6.4.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "trash": "^9.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

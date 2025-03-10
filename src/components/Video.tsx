@@ -56,7 +56,7 @@ const Video = forwardRef((props, ref) => {
     })
   }
 
-
+  // Add this new function to handle video deletion
   const handleDeleteVideo = async (id: string) => {
     if (confirm('Are you sure you want to delete this video?')) {
       try {
@@ -68,7 +68,7 @@ const Video = forwardRef((props, ref) => {
           throw new Error('Failed to delete video');
         }
         
-
+        // Remove the video from the state
         setVideos(videos.filter(video => video.id !== id));
       } catch (error) {
         console.error('Error deleting video:', error);
