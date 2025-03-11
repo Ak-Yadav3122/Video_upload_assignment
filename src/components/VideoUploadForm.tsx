@@ -34,7 +34,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to upload video')
+        throw new Error('Failed to upload your video')
       }
 
       setFormData({
@@ -53,7 +53,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       }
       
     } catch (error) {
-      console.error('Error uploading video:', error)
+      console.error('Error while uploading video:', error)
     } finally {
       setIsLoading(false)
     }
@@ -86,7 +86,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
           <textarea
             id="description"
             name="description"
-            placeholder="Enter your description "
+            placeholder="Please enter your description "
             value={formData.description}
             onChange={handleChange}
             rows={3}
@@ -121,7 +121,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             value={formData.thumbnailUrl}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-            placeholder="Inter your thumbnail URL Image address"
+            placeholder="Please enter your thumbnail URL Image address"
             required
           />
         </div>
