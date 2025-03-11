@@ -58,7 +58,7 @@ const Video = forwardRef((props, ref) => {
 
   // Add this new function to handle video deletion
   const handleDeleteVideo = async (id: string) => {
-    if (confirm('Are you sure you want to delete this video?')) {
+    if (confirm('Are you want to delete this video?')) {
       try {
         const response = await fetch(`/api/videos?id=${id}`, {
           method: 'DELETE',
