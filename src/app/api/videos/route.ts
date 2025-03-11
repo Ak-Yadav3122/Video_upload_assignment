@@ -27,14 +27,14 @@ export async function POST(request: NextRequest) {
 
     if (!body.title) {
       return NextResponse.json(
-        { error: "Title and URL are required" },
+        { error: "Title and URL are must be required" },
         { status: 400 }
       );
     }
 
     if (!body.url) {
       return NextResponse.json(
-        { error: "Title and URL are required" },
+        { error: "Title and URL are must be required" },
         { status: 400 }
       );
     }
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     
     if (!body.thumbnailUrl) {
       return NextResponse.json(
-        { error: "Thumbnail URL is required" },
+        { error: "Thumbnail URL is must be required" },
         { status: 400 }
       );
     }
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Error creating video:", error);
     return NextResponse.json(
-      { error: "Failed to create video" },
+      { error: "Failed to create your video" },
       { status: 500 }
     );
   }
