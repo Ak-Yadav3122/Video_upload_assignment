@@ -90,7 +90,7 @@ const Video = forwardRef((props, ref) => {
         </div>
       ) : videos.length === 0 ? (
         <div className="text-center py-10 bg-gray-50 rounded-lg">
-          <p className="text-gray-500">No videos found. Upload your first video!</p>
+          <p className="text-gray-500">No videos found.Please Upload your first video!</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
