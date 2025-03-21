@@ -34,7 +34,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to upload your video')
+        throw new Error('Failed to upload your video, please try again later.')
       }
 
       setFormData({
@@ -53,7 +53,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       }
       
     } catch (error) {
-      console.error('Error while uploading video:', error)
+      console.error('Error while uploading your video:', error)
     } finally {
       setIsLoading(false)
     }
@@ -61,7 +61,7 @@ const VideoUploadForm = ({ onSuccess }: { onSuccess?: () => void }) => {
 
   return (
     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Upload New Video</h2>
+      <h2 className="text-xl font-semibold mb-4">Upload Your New Video</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="title" className="block text-sm font-medium mb-1">
