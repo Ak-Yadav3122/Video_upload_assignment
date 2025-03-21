@@ -15,7 +15,7 @@ export async function GET() {
   } catch (error) {
     console.error("Error fetching videos:", error);
     return NextResponse.json(
-      { error: "Failed to fetch videos" },
+      { error: "Failed to fetch the videos" },
       { status: 500 }
     );
   }
@@ -27,14 +27,14 @@ export async function POST(request: NextRequest) {
 
     if (!body.title) {
       return NextResponse.json(
-        { error: "Title and URL are must be required" },
+        { error: "Title are must be required" },
         { status: 400 }
       );
     }
 
     if (!body.url) {
       return NextResponse.json(
-        { error: "Title and URL are must be required" },
+        { error: "URL are must be required" },
         { status: 400 }
       );
     }
@@ -74,7 +74,7 @@ export async function DELETE(request: NextRequest) {
 
     if (!id) {
       return NextResponse.json(
-        { error: "Video ID is required" },
+        { error: "Video ID is must required" },
         { status: 400 }
       );
     }
@@ -89,7 +89,7 @@ export async function DELETE(request: NextRequest) {
   } catch (error) {
     console.error("Error deleting video:", error);
     return NextResponse.json(
-      { error: "Failed to delete video" },
+      { error: "Failed to delete your video" },
       { status: 500 }
     );
   }
